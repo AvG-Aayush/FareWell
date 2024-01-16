@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/q.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="Video.css">
+    <title>Videos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="video">
+                <video src="Vid/1.mp4" controls autoplay></video>
+          <h3 class="title">01</h3>
+            </div>
+        </div>
+        <div class="videos">
+            <div class="vid active">
+                <video src="Vid/1.mp4" muted></video>
+           <h3 class="title">01</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/2.mp4" muted></video>
+           <h3 class="title">02</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/3.mp4" muted></video>
+           <h3 class="title">03</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/4.mp4" muted></video>
+           <h3 class="title">04</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/5.mp4" muted></video>
+           <h3 class="title">05</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/6.mp4" muted></video>
+           <h3 class="title">06</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/7.mp4" muted></video>
+           <h3 class="title">07</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/8.mp4" muted></video>
+           <h3 class="title">08</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/9.mp4" muted></video>
+           <h3 class="title">09</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/10.mp4" muted></video>
+           <h3 class="title">10</h3>
+            </div>
+            <div class="vid">
+                <video src="Vid/11.mp4" muted></video>
+           <h3 class="title">11</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let list = document.querySelectorAll('.videos .vid');
+        let man = document.querySelector('.main video');
+        let title = document.querySelector('.main .title');
+    list.forEach(video =>{
+         video.onclick = () =>{
+list.forEach(vid => vid.classList.remove('active'));
+video.classList.add('active');
+if(video.classList.contains('active')){
+    let src = video.children[0].getAttribute('src');
+    man.src = src;
+}
+         };
+        });
+    </script>
+</body>
+</html>

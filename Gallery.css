@@ -1,0 +1,132 @@
+.Gallery img:nth-child(89){
+margin-left: 350px;
+    height: 250px;
+    width: 320px;
+}
+.Gallery img{
+   filter: grayscale(100%) opacity(30%);
+        height: 250px;
+        width: 320px;
+        transition: 1s;
+    
+
+    }
+    .Gallery img:hover{
+        filter: grayscale(0%) opacity(100%);
+    }
+.Gallery{
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+   
+}
+body{
+    background-image: url(img/as.jpg) ;
+    background-size: cover;
+}
+.pop{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+width: 80%;
+max-width: 1600px;
+height: 90vh;
+max-height: 800px;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.75) scale(0);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 5;
+overflow: hidden;
+transition: 1s;
+opacity: 0;
+
+}
+.pop.active{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+pop.active .close,
+.pop.active .index,
+.pop.active .arrow-btn,
+.pop.active .name{
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 1s;
+
+}
+.topbar{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    line-height: 5px;
+    font-weight: 500;
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    color: aliceblue;
+    text-align: center;
+}
+.arrow-btn{
+    position: relative;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+  opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+
+}
+.name{
+    opacity: 0;
+}
+.left-arrow{
+    left: -70px;
+    font-size: 20px;
+}
+.right-arrow{
+    right: -930px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.arrow-btn:hover{
+    background:  rgba(0, 0, 0, 0.75);
+    color: aliceblue;
+}
+.index{
+    position: absolute;
+    bottom: -20px;
+    right: 8px;
+    font-size: 80px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+}
+.large{
+    position: relative;
+    margin-top: 5%;
+    left: -30px;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+@media(max-width: 600px) {
+    .Gallery img:nth-child(89){
+        margin-left: 00px;
+}
+}

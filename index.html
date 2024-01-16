@@ -1,0 +1,144 @@
+<!DOCTYPE html>firebase login
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/q.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="new.css"> 
+    <title>Riya</title>
+</head>
+<body>
+    <div class="work">
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Riya">
+    </div>
+    <ul class="menu">
+        <a href="new.html">Home</a>
+        <a href="Video.html">Videos</a>
+        <a href="Audio.html">Audios</a>
+        <a href="Gallery.html">Gallery</a>
+    </ul>
+</header>
+
+<div class="slider">
+    <div class="list">
+    <div class="item active">
+        <img src="new/1.jpg" >
+        <div class="content">
+            <p>Riya</p>
+            <h2>Swagy</h2>
+            <p>kjhbvcd</p>
+        </div>
+    </div>
+        <div class="item">
+        <img src="new/2.jpg" >
+        <div class="content">
+            <p>Riya</p>
+            <h2>Silent</h2>
+            <p>kjhbvcd</p>
+        </div>
+    </div>
+        <div class="item">
+        <img src="new/3.jpg" >
+        <div class="content">
+            <p>Riya</p>
+            <h2>Sweet</h2>
+            <p>kjhbvcd</p>
+        </div>
+    </div>
+    <div class="item">
+    <img src="new/4.jpg" >
+    <div class="content">
+        <p>Riya</p>
+        <h2>Charming</h2>
+        <p>kjhbvcd</p>
+    </div>
+</div>
+<div class="item">
+<img src="new/5.jpg" >
+<div class="content">
+    <p>Riya</p>
+    <h2>Bunny</h2>
+    <p>kjhbvcd</p>
+</div>
+</div>
+
+</div>
+<div class="arrows">
+    <button id="prev"><</button>
+    <button id="next">></button>
+</div>
+<div class="thumbnail">
+    <div class="item active">
+        <img src="new/1.jpg">
+    <div class="content">Swagy</div>
+    </div>
+    <div class="item">
+        <img src="new/2.jpg">
+        <div class="content">Silent</div>
+    </div>
+    <div class="item">
+        <img src="new/3.jpg">
+    <div class="content">Sweet</div>
+    </div>
+    <div class="item">
+        <img src="new/4.jpg">
+        <div class="content">Charming</div>
+    </div>
+    <div class="item">
+        <img src="new/5.jpg">
+        <div class="content">Bunny</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+    <div class="hola">
+        <h1 class="counter">0</h1>
+            <div class="box">
+                <span style="--i:1"><img height=" 300px" width="300px" src="img/2.jpg" alt=""></span>
+                <span style="--i:2"><img height=" 300px" width="300px" src="img/3.png" alt=""></span>
+                <span style="--i:3"><img height=" 300px" width="300px" src="img/4.png" alt=""></span>
+                <span style="--i:4"><img height=" 300px" width="300px" src="img/5.png" alt=""></span>
+                <span style="--i:5"><img height=" 300px" width="300px" src="img/6.png" alt=""></span>
+                <span style="--i:6"><img height=" 300px" width="300px" src="img/3.jpg" alt=""></span>
+                <span style="--i:7"><img height=" 300px" width="300px" src="img/a.jpg" alt=""></span>
+                <span style="--i:8"><img height=" 300px" width="300px" src="img/1.png" alt=""></span>
+            </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="int.js"></script>
+
+<script>
+  
+
+  function startLoader(){
+    let counterElement = document.querySelector(".counter");
+    let currentValue = 0;
+    function updateCounter() {
+        if (currentValue === 100) {
+            return;
+        }
+        currentValue += Math.floor(Math.random() *10)+1;
+        if (currentValue >100){
+            currentValue = 100;           
+         }
+         counterElement.textContent = currentValue + "%";
+let delay = Math.floor(Math.random()*200)+250;
+setTimeout(updateCounter, delay);
+    }
+updateCounter();
+}
+startLoader();
+
+
+</script>
+
+
+</body>
+
+
+</html>
